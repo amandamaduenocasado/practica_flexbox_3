@@ -6,21 +6,40 @@ html {
   scroll-behavior: smooth;
 }
 
-ul {
-  list-style: none;
-  padding: 60px;
-  margin: 0;
-  margin-bottom: 0;
+a {
+  color: #382AE1;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+    color: #766CF1;
+  }
 }
 
 body {
-  background-color: #d6e1ff;
+  position: relative;
+  background-color: #E0E8FF;
   margin: 0;
   padding: 0;
   font-family: 'Red Hat Display', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 71px 24px 71px 24px
+}
+
+.vector-mobile {
+  position: absolute;
+  z-index: -1;
+  bottom: 450px;
+}
+
+@media screen and (width > 768px) {
+  .vector-mobile {
+    width: 1440px;
+    height: 437px;
+  }
 }
 
 .card {
@@ -41,6 +60,7 @@ body {
   width: 327px;
   height: 160px;
   margin-bottom: 32px;
+  border-radius: 20px 20px 0 0;
 }
 
 .title-header {
@@ -121,11 +141,28 @@ body {
   text-align: center;
   padding: 15px 0;
   margin-bottom: 24px;
-  box-shadow: 0 15px 10px rgb(220, 220, 220);
+  box-shadow: 0 20px 20px rgb(56, 42, 225, 0.2);
+}
+
+@media (hover: hover) {
+  .cta-payment:hover {
+    width: 279px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 15;
+    color: white;
+    background-color: #766CF1;
+  }
 }
 
 .text-payment {
   font-size: 15px;
   font-weight: 900;
   color: #717fa6;
+}
+
+@media (hover: hover) {
+  .text-payment:hover {
+    color: #1F2E55;
+  }
 }
